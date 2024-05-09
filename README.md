@@ -30,4 +30,12 @@ TO-DO (documentar):
 - Chamada do script start com NPM ao invés do NPX
 
 - O que é o Chocolatey? (e porque não instalá-lo agora)
+- **Chocolatey**: é facilitador para instalação, remoção e atualização de pacotes no sistema operacional. Estes pacotes vão desde um banco de dados, como o mysql, até ferramentas mais complexas, como o Docker.
+Ele poder instalar e desinstalar qualquer pacote com um comando simples, sendo eles:
 
+~~~bash
+choco install "nomeDoPacote"
+choco uninstall "nomeDoPacote"
+~~~
+
+O próprio Chocolatey mostra para o usuário o quão pesado ele é por já ter **MUITAS** informações em seu download; por isso apenas instale se tiver certeza de que vai usar (e horas que vai esperar).
