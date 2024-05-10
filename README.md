@@ -20,11 +20,86 @@ Para este projeto, vamos usar o Node.js e o NPM (Node Package Manager):
 
 NPX -> Node Package eXecuter (Executor de pacote do Node)
 
+- **Instalação e uso do Json Server**: <https://github.com/typicode/json-server>
+    Para realizar a instalação, basta usar o comando npm 
+    ~~~bash
+    npm install json-server
+    ~~~
+    E então você precisa criar um arquivo `db.json` ou `db.json5`
+
+    E dentro de algum deles, por o código abaixo referente ao json ou json5
+
+- `db.Json`
+~~~json
+{
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+~~~
+
+<details>
+
+<summary>Olhe um exemplo do db.json5</summary>
+
+
+~~~bash
+{
+  posts: [
+    { id: '1', title: 'a title', views: 100 },
+    { id: '2', title: 'another title', views: 200 },
+  ],
+  comments: [
+    { id: '1', text: 'a comment about post 1', postId: '1' },
+    { id: '2', text: 'another comment about post 1', postId: '1' },
+  ],
+  profile: {
+    name: 'typicode',
+  },
+}
+~~~
+
+Você pode ser mais sobre formato JSON5 [Aqui](https://github.com/json5/json5).
+
+</details>
+
+- **Execução do json-server**: após ter efetuado os passos anteriores, basta usar o seguinte comando no prompt de comando;
+
+~~~bash
+npx json-server db.json
+~~~
+
+Ou podemos automatizar esta execução - **Criando um script para execução do json-server**: dentro do arquivo `package.json`, gerado na instalação do json-server, usaremos às seguintes linhas de código `dentro das chaves que já estão no arquivo` 
+
+~~~bash
+"scripts": {
+    "start": "npx json-server data/db.json5"
+  }
+~~~
+
+Após ter feito isso, toda vez que quiser executar o json-server, basta digitar o seguinte comando no prompt:
+
+~~~bash
+npm start
+~~~
+
+- **Criação do arquivo .gitignore**: após ter efetuado os passos anteriores, crie um arquivo com o nome `.gitignore`, é um arquivo sem nome, apenas com a extensão, ele fará com que os arquivos escolhidos dentro dele, sejam ignorados, e não sejam versionados.
+
+- Basta por o seguinte comando dentro dele:
+
+~~~bash
+/node_modules
+~~~
+
 TO-DO (documentar):
-- Instalação e uso do do Json Server: <https://github.com/typicode/json-server>
-- Criação do .gitignore
-- Utilidade dos arquivos package
-- Criação do script "start" no package.json
 - Observações em relação ao uso de JSON5 vs. JSON: <https://github.com/json5/json5>
 - Instalação das extensões para formatação de arquivo .json5
 - Chamada do script start com NPM ao invés do NPX
