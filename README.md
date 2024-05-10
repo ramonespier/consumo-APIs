@@ -85,7 +85,7 @@ Ou podemos automatizar esta execução - **Criando um script para execução do 
   }
 ~~~
 
-Após ter feito isso, toda vez que quiser executar o json-server, basta digitar o seguinte comando no prompt:
+Após ter feito isso, toda vez que quiser executar o json-server, basta digitar o seguinte comando no terminal:
 
 ~~~bash
 npm start
@@ -104,7 +104,7 @@ TO-DO (documentar):
 - Instalação das extensões para formatação de arquivo .json5
 - Chamada do script start com NPM ao invés do NPX
 
-- O que é o Chocolatey? (e porque não instalá-lo agora)
+<!-- - O que é o Chocolatey? (e porque não instalá-lo agora) -->
 - **Chocolatey**: é facilitador para instalação, remoção e atualização de pacotes no sistema operacional. Estes pacotes vão desde um banco de dados, como o mysql, até ferramentas mais complexas, como o Docker.
 Ele poder instalar e desinstalar qualquer pacote com um comando simples, sendo eles:
 
