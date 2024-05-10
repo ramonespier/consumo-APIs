@@ -1,0 +1,14 @@
+{
+  "produtos": [
+    {
+      "id": "5c6e",
+      "descricao": "Halls Preto",
+      "preco": 3
+    },
+    {
+      "id": "8219",
+      "descricao": "Twix",
+      "preco": 3.75
+    }
+  ]
+}
