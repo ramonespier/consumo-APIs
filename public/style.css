@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+}
+
+button {
+    border: 1px solid aliceblue;
+    border-radius: 6px;
+}
+
+li, div {
+    color: aliceblue;
+}

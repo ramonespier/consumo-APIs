@@ -1,30 +1,29 @@
-// fetch(requisicao) // retorna uma resposta
-
-const requisicao = new Request('http://localhost:3000/produtos', {
+const reqGet = new Request('http://localhost:3000/produtos', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
   }
-});
+})
 
-fetch(requisicao)
-    .then(resposta => resposta.json())
-    .then(resposta => {
+fetch(reqGet)
+  .then(resposta => resposta.json())
+  .then(resposta => {
+    const ul = document.createElement('ul')
 
-        const div = document.createElement('div');
+    resposta.forEach(produto => {
 
-        resposta.forEach(produto => {
-            const pDescricao = document.createElement('p');
-            pDescricao.innerHTML = produto.descricao;
+      const liId = document.createElement('li')
+      liId.innerHTML = produto.id
 
-            const pId = document.createElement('p');
-            pId.innerHTML = produto.id;
+      const liDescricao = document.createElement('li')
+      liDescricao.innerHTML = produto.descricao
 
-            const pPreco = document.createElement('p');
-            pPreco.innerHTML = produto.preco;
+      const liPreco = document.createElement('li')
+      liPreco.innerHTML = produto.preco
 
-            div.append(pId, pDescricao, pPreco)
-        });
+      ul.append(liId, liDescricao, liPreco)
 
-        document.body.appendChild(div);
     });
+
+    document.body.appendChild(ul)
+  });
