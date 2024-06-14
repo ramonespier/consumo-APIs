@@ -1,19 +1,19 @@
-const produto = {
-    "descricao": document.querySelector('#descricao').value,
-    "preco": document.querySelector('#preco')
+const produtoPost = {
+  "descricao": document.querySelector('#descricao').value,
+  "preco": document.querySelector('#preco').value
 }
 
-function cadastraProduto (produtoPost) {
+function cadastraProduto(produtoPost) {
+
   const reqPost = new Request('http://localhost:3000/produtos', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(produtoPost)
+      "method": "POST",
+      "headers": {
+          "Content-type": "application/json"
+      },
+      "body": JSON.stringify(produtoPost)
   })
-
-    fetch(reqPost)
-
+  
+  fetch(reqPost)
 }
 
-document.querySelector('#btAdd').addEventListener('click', cadastraProduto(produto));
+document.querySelector('#btAdd').addEventListener('click', cadastraProduto(produtoPost));
